@@ -1,11 +1,17 @@
 {
-  "name": "questionnaire",
+  "name": "questionnaire/questionnaire",
   "type": "project",
   "license": "MIT",
   "require": {
     "php": "^8.2"
   },
   "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Vendor\\": "vendor/"
+    },
+    "files": ["vendor/helpers.php"]
   },
   "config": {
     "optimize-autoloader": true,
