@@ -1,0 +1,17 @@
+{
+  "name": "questionnaire",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
