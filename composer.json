@@ -9,9 +9,9 @@
   },
   "autoload": {
     "psr-4": {
-      "Vendor\\": "vendor/"
+      "Core\\": "core/"
     },
-    "files": ["vendor/helpers.php"]
+    "files": ["core/helpers.php"]
   },
   "config": {
     "optimize-autoloader": true,

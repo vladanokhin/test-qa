@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\App;
+namespace Core\App;
 
 /**
  * Class for preparing and configuring application
