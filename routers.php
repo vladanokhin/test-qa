@@ -1,6 +1,7 @@
 <?php
 
+use Controllers\RegisterController;
+use Core\Router\Route;
 
-use Vendor\Router\Router;
 
-new Router();
+Route::get('/sign-up/', [RegisterController::class, 'show']);

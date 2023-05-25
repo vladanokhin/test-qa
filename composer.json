@@ -9,7 +9,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Core\\": "core/"
+      "Core\\": "core/",
+      "Controllers\\": "controllers/"
     },
     "files": ["core/helpers.php"]
   },

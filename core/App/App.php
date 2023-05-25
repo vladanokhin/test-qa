@@ -5,20 +5,21 @@ namespace Core\App;
 /**
  * Class for preparing and configuring application
  */
-class Instance
+class App
 {
     protected array $config;
 
     public function __construct()
     {
-        $this->config = $this->initConfig();
+        $this->config = $this->initConfigs();
+        $this->initRouters();
     }
 
     /**
-     * Get array from configs
+     * Get an array of all configurations
      * @return array
      */
-    private function initConfig(): array
+    private function initConfigs(): array
     {
         $pathToConfigs = APP_DIR . '/configs/';
         $configFiles = scandir($pathToConfigs);
@@ -32,9 +33,14 @@ class Instance
                 continue;
 
             $filename = pathinfo($config, PATHINFO_FILENAME);
-            $cfg += [$filename => include($pathToConfigs . $config)];
+            $cfg += [$filename => require_once($pathToConfigs . $config)];
         }
 
         return $cfg;
+    }
+
+    private function initRouters()
+    {
+        require_once($this->config['app']['routers']);
     }
 }
