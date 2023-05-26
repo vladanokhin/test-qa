@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'routes' => 'routers.php',
+    'routers' => 'routers.php',
 ];
